@@ -1,11 +1,16 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh; /* Ensures the body takes full height */
     background-color: rgba(66, 17, 25, 1);
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #particles-js {
@@ -21,56 +26,57 @@ header {
     position: relative;
     z-index: 1;
     text-align: center;
-    padding-top: 50px; /* Reduced padding to fit content better */
+    padding-top: 30px; /* Adjusted padding to make it more compact */
+    padding-bottom: 30px; /* Ensure bottom space too */
 }
 
 .profile-img {
-    width: 80px;  /* Smaller profile image */
-    height: 80px;  /* Smaller profile image */
+    width: 50px;  /* Much smaller profile image */
+    height: 50px;  /* Much smaller profile image */
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     object-fit: cover;
-    border: 3px solid black; /* Smaller border */
+    border: 2px solid black; /* Smaller border */
 }
 
 h1 {
-    font-size: 1.8em; /* Smaller font size */
+    font-size: 1.2em; /* Smaller font size for heading */
     color: #fff;
     line-height: 1.2;
     margin-bottom: 5px; /* Reduced margin */
 }
 
 .subtitle {
-    font-size: 1em; /* Smaller subtitle */
+    font-size: 0.8em; /* Smaller subtitle */
     color: #ddd;
     margin-top: 5px; /* Reduced margin */
 }
 
 .quote {
-    font-size: 1.2em; /* Smaller quote */
+    font-size: 1em; /* Smaller quote text */
     color: #0077cc;
-    margin-top: 15px;
+    margin-top: 10px;
     font-style: italic;
 }
 
 .social-box {
-    margin-top: 20px;  /* Reduced margin */
+    margin-top: 15px;
     padding: 5px;
     display: flex;
     justify-content: center;
-    gap: 15px;  /* Reduced gap between social icons */
+    gap: 10px;  /* Reduced gap between social icons */
     position: relative;
     z-index: 2;
 }
 
 .social-link {
     display: inline-block;
-    font-size: 1em;  /* Smaller font size */
-    padding: 8px 15px;  /* Smaller padding */
+    font-size: 0.9em;  /* Smaller font size */
+    padding: 6px 12px;  /* Smaller padding */
     border-radius: 5px;
     text-decoration: none;
     color: white;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Smaller shadow */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -99,63 +105,31 @@ footer {
     bottom: 10px;
     width: 100%;
     text-align: center;
-    font-size: 0.8em; /* Smaller footer */
+    font-size: 0.7em; /* Smaller footer */
     color: #ddd;
     z-index: 1;
 }
 
 @media (max-width: 768px) {
     header {
-        padding-top: 40px; /* Reduced padding */
+        padding-top: 20px;
     }
 
     .profile-img {
-        width: 70px;
-        height: 70px;
+        width: 40px;
+        height: 40px;
     }
 
     h1 {
-        font-size: 1.6em;
-    }
-
-    .subtitle {
-        font-size: 0.9em;
-    }
-
-    .quote {
         font-size: 1.1em;
     }
 
-    .social-link {
-        font-size: 0.9em;
-        padding: 6px 12px;
-    }
-
-    footer {
-        font-size: 0.7em;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
-    .profile-img {
-        width: 60px;
-        height: 60px;
-    }
-
-    h1 {
-        font-size: 1.4em;
-    }
-
     .subtitle {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
     .quote {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .social-link {
@@ -165,5 +139,37 @@ footer {
 
     footer {
         font-size: 0.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .profile-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    .subtitle {
+        font-size: 0.6em;
+    }
+
+    .quote {
+        font-size: 0.8em;
+    }
+
+    .social-link {
+        font-size: 0.7em;
+        padding: 4px 8px;
+    }
+
+    footer {
+        font-size: 0.5em;
     }
 }
