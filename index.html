@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Div for particles.js -->
+    <div id="particles-js"></div>
+
     <header>
         <!-- Profile Image -->
         <img src="memoji.png" alt="Luis Almeida" class="profile-img">
@@ -14,25 +17,37 @@
         <p class="subtitle">Entry-Level Specialist | Expertise in Data Scraping, Web Crawling, SaaS Development, Database Management, and API Integration</p>
         <p class="quote">"The best way to predict the future is to create it."</p>
 
-        <!-- LinkedIn Box -->
+        <!-- Social Boxes (GitHub and LinkedIn) -->
         <div class="social-box">
+            <!-- LinkedIn -->
             <a href="https://www.linkedin.com/in/luis-almeida-9187a62ba/" target="_blank" class="social-link linkedin">
                 <span>LinkedIn</span>
             </a>
-        </div>
 
-        <!-- GitHub Box -->
-        <div class="social-box">
+            <!-- GitHub -->
             <a href="https://github.com/LuisJrA" target="_blank" class="social-link github">
                 <span>GitHub</span>
             </a>
         </div>
     </header>
+
     <main>
-        <!-- Add more content here, such as your projects, about me, etc. -->
+        <!-- More content like projects, about me, etc. -->
     </main>
+
     <footer>
         <p>&copy; 2024 Luis Almeida. All rights reserved.</p>
     </footer>
+
+    <!-- Load particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Initialize particles.js with the configuration file -->
+    <script>
+        // Initialize particles.js using the particles.json file
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('Particles.js config loaded successfully!');
+        });
+    </script>
 </body>
 </html>
