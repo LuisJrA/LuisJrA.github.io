@@ -67,7 +67,6 @@ footer {
 /* Social Link Styling */
 .social-link {
     display: inline-block;
-    color: white;
     font-size: 1.2em;
     padding: 10px 20px;
     border-radius: 5px;
@@ -91,11 +90,13 @@ footer {
 
 /* GitHub Styling */
 .github {
-    background-color: #333;  /* GitHub Dark */
+    background-color: #000000;  /* Black for GitHub */
+    color: white;
 }
 
 .github:hover {
-    background-color: #2c2c2c; /* Darker GitHub */
+    background-color: #333333; /* Darker black for hover */
+    color: white;
 }
 
 /* Footer Text Styling */
@@ -109,7 +110,7 @@ footer p {
     body {
         font-size: 14px;
     }
-    
+
     header {
         padding: 0 15px;
     }
