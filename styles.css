@@ -9,6 +9,14 @@ header {
     margin-top: 50px;
 }
 
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
 h1 {
     font-size: 2.5em;
     color: #333;
@@ -42,4 +50,37 @@ footer {
     bottom: 10px;
     width: 100%;
     text-align: center;
+}
+
+/* Social Box Styling */
+.social-box {
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    background-color: #0077b5;  /* LinkedIn Blue */
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #005c8b; /* Darker LinkedIn Blue */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.social-link span {
+    display: block;
+}
+
+/* Make the footer text smaller */
+footer p {
+    font-size: 0.9em;
+    color: #666;
 }
