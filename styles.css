@@ -21,61 +21,61 @@ header {
     position: relative;
     z-index: 1;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 50px; /* Reduced padding to fit content better */
 }
 
 .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 80px;  /* Smaller profile image */
+    height: 80px;  /* Smaller profile image */
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     object-fit: cover;
-    border: 5px solid black;
+    border: 3px solid black; /* Smaller border */
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 1.8em; /* Smaller font size */
     color: #fff;
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduced margin */
 }
 
 .subtitle {
-    font-size: 1.2em;
+    font-size: 1em; /* Smaller subtitle */
     color: #ddd;
-    margin-top: 10px;
+    margin-top: 5px; /* Reduced margin */
 }
 
 .quote {
-    font-size: 1.5em;
+    font-size: 1.2em; /* Smaller quote */
     color: #0077cc;
-    margin-top: 20px;
+    margin-top: 15px;
     font-style: italic;
 }
 
 .social-box {
-    margin-top: 30px;
-    padding: 10px;
+    margin-top: 20px;  /* Reduced margin */
+    padding: 5px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;  /* Reduced gap between social icons */
     position: relative;
     z-index: 2;
 }
 
 .social-link {
     display: inline-block;
-    font-size: 1.2em;
-    padding: 10px 20px;
+    font-size: 1em;  /* Smaller font size */
+    padding: 8px 15px;  /* Smaller padding */
     border-radius: 5px;
     text-decoration: none;
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Smaller shadow */
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .linkedin {
@@ -99,54 +99,23 @@ footer {
     bottom: 10px;
     width: 100%;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.8em; /* Smaller footer */
     color: #ddd;
     z-index: 1;
 }
 
 @media (max-width: 768px) {
     header {
-        padding-top: 50px;
+        padding-top: 40px; /* Reduced padding */
     }
 
     .profile-img {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
     }
 
     h1 {
-        font-size: 2em;
-    }
-
-    .subtitle {
-        font-size: 1em;
-    }
-
-    .quote {
-        font-size: 1.2em;
-    }
-
-    .social-link {
-        font-size: 1em;
-    }
-
-    footer {
-        font-size: 0.8em;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
-    .profile-img {
-        width: 80px;
-        height: 80px;
-    }
-
-    h1 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 
     .subtitle {
@@ -159,9 +128,42 @@ footer {
 
     .social-link {
         font-size: 0.9em;
+        padding: 6px 12px;
     }
 
     footer {
         font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .profile-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    .subtitle {
+        font-size: 0.8em;
+    }
+
+    .quote {
+        font-size: 1em;
+    }
+
+    .social-link {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+
+    footer {
+        font-size: 0.6em;
     }
 }
