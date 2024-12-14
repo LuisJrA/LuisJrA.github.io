@@ -25,8 +25,8 @@ header {
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
     object-fit: cover;
@@ -36,6 +36,8 @@ header {
 h1 {
     font-size: 2.5em;
     color: #fff;
+    line-height: 1.2;
+    margin-bottom: 10px;
 }
 
 .subtitle {
@@ -100,4 +102,66 @@ footer {
     font-size: 0.9em;
     color: #ddd;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding-top: 50px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .quote {
+        font-size: 1.2em;
+    }
+
+    .social-link {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .subtitle {
+        font-size: 0.9em;
+    }
+
+    .quote {
+        font-size: 1.1em;
+    }
+
+    .social-link {
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.7em;
+    }
 }
