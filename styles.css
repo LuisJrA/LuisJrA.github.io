@@ -4,9 +4,10 @@ body {
     padding: 0;
     height: 100vh; /* Make sure body takes the full viewport height */
     background-color: red; /* Red background */
+    overflow: hidden; /* Hide any overflow */
 }
 
-/* Make sure the particles div covers the whole screen */
+/* Particles canvas */
 #particles-js {
     position: absolute;
     width: 100%;
@@ -16,8 +17,94 @@ body {
     z-index: -1; /* Ensure particles appear behind your content */
 }
 
-/* Optional: Add some padding/margin to the content on top of the particles */
+/* Content styling */
 header {
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Ensure header is above the particles */
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make image round */
+    margin-bottom: 20px;
+    object-fit: cover; /* Ensure image fills the circle */
+    z-index: 1; /* Ensure profile image stays on top of particles */
+}
+
+/* Header Text */
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.quote {
+    font-size: 1.5em;
+    color: #0077cc;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Social Box for GitHub and LinkedIn */
+.social-box {
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;  /* Center the buttons */
+    gap: 20px;  /* Space between buttons */
+    position: relative;  /* Ensure the social buttons appear above particles */
+    z-index: 2; /* Make sure social buttons are above particles */
+}
+
+/* Social Link Styling */
+.social-link {
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: white; /* Make sure the text is visible */
+}
+
+/* Social Link Hover Effects */
+.social-link:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.linkedin {
+    background-color: #0077b5; /* LinkedIn Blue */
+}
+
+.linkedin:hover {
+    background-color: #005c8b;
+}
+
+.github {
+    background-color: #000000; /* GitHub Black */
+}
+
+.github:hover {
+    background-color: #333333;
+}
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    z-index: 1; /* Ensure footer is above the particles */
 }
