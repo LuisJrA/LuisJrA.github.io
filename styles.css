@@ -1,49 +1,50 @@
-/* Ensure the body has a red background */
+/* Ensure the body takes up the full height */
 body {
     margin: 0;
     padding: 0;
-    height: 100vh; /* Make sure body takes the full viewport height */
+    height: 100vh; /* Full viewport height */
     background-color: red; /* Red background */
-    overflow: hidden; /* Hide any overflow */
+    overflow: hidden; /* Hide any overflow caused by particles */
+    font-family: Arial, sans-serif;
+    color: white; /* Make the text visible over the red background */
 }
 
-/* Particles canvas */
+/* Particles canvas - make sure it's full screen */
 #particles-js {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
-    z-index: -1; /* Ensure particles appear behind your content */
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keep particles behind the content */
 }
 
-/* Content styling */
+/* Header content */
 header {
     position: relative;
-    z-index: 1; /* Ensure header is above the particles */
+    z-index: 1; /* Ensure the header is above the particles */
     text-align: center;
-    padding-top: 20px;
+    padding-top: 100px; /* Adjusted to give space above */
 }
 
 /* Profile Image */
 .profile-img {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Make image round */
+    border-radius: 50%; /* Round image */
     margin-bottom: 20px;
-    object-fit: cover; /* Ensure image fills the circle */
-    z-index: 1; /* Ensure profile image stays on top of particles */
+    object-fit: cover; /* Ensure the image is well cropped */
 }
 
 /* Header Text */
 h1 {
     font-size: 2.5em;
-    color: #333;
+    color: #fff;
 }
 
 .subtitle {
     font-size: 1.2em;
-    color: #555;
+    color: #ddd;
     margin-top: 10px;
 }
 
@@ -61,8 +62,8 @@ h1 {
     display: flex;
     justify-content: center;  /* Center the buttons */
     gap: 20px;  /* Space between buttons */
-    position: relative;  /* Ensure the social buttons appear above particles */
-    z-index: 2; /* Make sure social buttons are above particles */
+    position: relative;
+    z-index: 2; /* Ensure social buttons are on top of particles */
 }
 
 /* Social Link Styling */
@@ -72,9 +73,9 @@ h1 {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+    color: white; /* Ensure text is visible */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    color: white; /* Make sure the text is visible */
 }
 
 /* Social Link Hover Effects */
@@ -98,13 +99,13 @@ h1 {
     background-color: #333333;
 }
 
-/* Footer styling */
+/* Footer */
 footer {
     position: fixed;
     bottom: 10px;
     width: 100%;
     text-align: center;
     font-size: 0.9em;
-    color: #666;
-    z-index: 1; /* Ensure footer is above the particles */
+    color: #ddd;
+    z-index: 1; /* Ensure footer is above particles */
 }
