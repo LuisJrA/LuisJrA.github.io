@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoices</title>
+
+    <!-- Correctly place the Google Fonts link above your custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Gill+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Particle.js script -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
+    <!-- Particle Effect Container -->
+    <div id="particles-js"></div>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
         <a href="index.html" class="nav-button">Home</a>
@@ -19,11 +30,7 @@
         <div class="invoice-form">
             <form id="invoiceForm">
                 <div class="form-group">
-                    <label for="invoiceNumber">Invoice Number:</label>
-                    <input type="text" id="invoiceNumber" name="invoiceNumber" required />
-                </div>
-                <div class="form-group">
-                    <label for="invoiceDate">Invoice Date:</label>
+                    <label for="invoiceDate">Invoice Date Request:</label>
                     <input type="date" id="invoiceDate" name="invoiceDate" required />
                 </div>
                 <div class="form-group">
@@ -44,14 +51,62 @@
     </section>
 
     <footer>
-        <p>© 2025 Your Name | All Rights Reserved</p>
+        <p>© 2024 Luis Almeida Jr | All Rights Reserved | almeidaluis05@outlook.com</p>
     </footer>
 
     <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true
+                },
+                "size": {
+                    "value": 5,
+                    "random": true
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3,
+                    "random": true,
+                    "direction": "none",
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "window",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
         document.getElementById("invoiceForm").addEventListener("submit", function(event) {
             event.preventDefault();
             alert("Invoice submitted!");
-            // You can add more functionality here like saving the data or sending to a backend
+            // Add functionality for saving or sending the form data to the server here
         });
     </script>
 </body>

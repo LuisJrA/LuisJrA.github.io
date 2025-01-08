@@ -18,6 +18,16 @@ body {
     min-height: 100%; /* Ensures content takes up full height */
 }
 
+/* Ensure particles.js stays in the background */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure particles are behind other content */
+}
+
 /* Header section */
 header {
     position: relative;
@@ -60,12 +70,13 @@ h1 {
 .navbar {
     display: flex;
     justify-content: center;
-    background-color: #333;
+    background-color: #1b1717;
     padding: 10px 20px;
     width: 100%;
-    position: absolute;
-    top: 10px;
-    z-index: 2;
+    position: fixed; /* Change to fixed positioning */
+    top: 0; /* Ensures the navbar starts at the top of the page */
+    left: 0; /* Ensures the navbar spans the entire width */
+    z-index: 3; /* Ensure the navbar is on top of other content */
 }
 
 .nav-button {
@@ -150,25 +161,6 @@ h1 {
     transition: opacity 0.5s ease;
 }
 
-/* Logos container animation */
-.logos-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 20px;
-    animation: move-logos 12s linear infinite;
-    z-index: 1;
-}
-
-.logos-container img {
-    width: auto;
-    height: 50px;
-    margin-right: 20px;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
 /* Keyframe animation */
 @keyframes move-logos {
     0% {
@@ -210,33 +202,48 @@ footer p {
 .invoice-section {
     padding: 20px;
     text-align: center;
+    margin-top: 120px; /* Ensure the invoice starts below the navbar */
 }
 
+/* Invoice form container */
 .invoice-form {
     background-color: #fff;
     color: #333;
     padding: 20px;
+    padding-right: 40px; /* Increased padding on the right side */
     border-radius: 10px;
-    width: 60%;
-    margin: 20px auto;
+    width: 75%; /* Adjusted width */
+    margin: 20px auto; /* Keep it centered */
+    box-sizing: border-box; /* Ensure padding is inside the width */
+    max-width: 1000px; /* Optional: Max width to prevent it from being too wide */
+    font-family: 'Gill Sans', sans-serif !important; /* Ensure Gill Sans font is applied to the entire form */
 }
 
+/* Form groups with label and input fields */
 .invoice-form .form-group {
     margin-bottom: 20px;
 }
 
+/* Label styling - Force font to Gill Sans */
 .invoice-form label {
     display: block;
     font-weight: bold;
+    font-family: 'Gill Sans', sans-serif !important; /* Apply Gill Sans font with !important */
 }
 
-.invoice-form input, .invoice-form textarea {
+/* Apply font to text input and textarea elements */
+.invoice-form input[type="text"],
+.invoice-form input[type="date"],
+.invoice-form input[type="number"],
+.invoice-form textarea {
+    font-family: 'Gill Sans', sans-serif !important; /* Apply Gill Sans font to input fields and textarea */
+    font-size: 1em; /* Uniform font size */
     width: 100%;
     padding: 10px;
-    font-size: 1em;
     margin-top: 5px;
 }
 
+/* Styling for the submit button */
 .invoice-form button {
     background-color: #444;
     color: white;
@@ -244,8 +251,10 @@ footer p {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Gill Sans', sans-serif !important; /* Apply Gill Sans font to the button */
 }
 
+/* Button hover effect */
 .invoice-form button:hover {
     background-color: #666;
 }

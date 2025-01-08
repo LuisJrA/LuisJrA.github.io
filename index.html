@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
+    <!-- Particle Effect Container -->
+    <div id="particles-js"></div>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
         <a href="index.html" class="nav-button">Home</a>
@@ -17,9 +21,9 @@
         <div class="profile-header">
             <img class="profile-img" src="images/memoji.png" alt="Profile Image" />
         </div>
-        <h1>Your Name</h1>
-        <p class="subtitle">Web Developer | Designer | Programmer</p>
-        <p class="quote">"Code is like humor. When you have to explain it, it’s bad."</p>
+        <h1>Luis Almeida Jr</h1>
+        <p class="subtitle">Entry-Level Specialist | Expertise in Data Scraping, Web Crawling, SaaS Development, Database Management, and API Integration</p>
+        <p class="quote">Empowering Business Growth Through Innovative IT Solutions</p>
 
         <div class="social-box">
             <a href="https://www.linkedin.com" class="social-link linkedin">
@@ -44,7 +48,57 @@
     </div>
 
     <footer>
-        <p>© 2025 Your Name | All Rights Reserved</p>
+        <p>© 2024 Luis Almeida Jr | All Rights Reserved | almeidaluis05@outlook.com</p>
     </footer>
+
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true
+                },
+                "size": {
+                    "value": 5,
+                    "random": true
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3,
+                    "random": true,
+                    "direction": "none",
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "window",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
