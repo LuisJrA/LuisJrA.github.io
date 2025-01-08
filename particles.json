@@ -18,15 +18,15 @@
       "random": true
     },
     "size": {
-      "value": 5, 
+      "value": 5,
       "random": true
     },
     "move": {
       "enable": true,
-      "speed": 3,  
+      "speed": 3,
       "random": true,
       "direction": "none",
-      "out_mode": "out", 
+      "out_mode": "out",
       "bounce": false
     }
   },

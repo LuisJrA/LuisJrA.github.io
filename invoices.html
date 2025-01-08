@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-button">Home</a>
+        <a href="invoices.html" class="nav-button">Invoices</a>
+    </nav>
+
+    <section class="invoice-section">
+        <h2>Submit Your Invoice</h2>
+
+        <div class="invoice-form">
+            <form id="invoiceForm">
+                <div class="form-group">
+                    <label for="invoiceNumber">Invoice Number:</label>
+                    <input type="text" id="invoiceNumber" name="invoiceNumber" required />
+                </div>
+                <div class="form-group">
+                    <label for="invoiceDate">Invoice Date:</label>
+                    <input type="date" id="invoiceDate" name="invoiceDate" required />
+                </div>
+                <div class="form-group">
+                    <label for="clientName">Client Name:</label>
+                    <input type="text" id="clientName" name="clientName" required />
+                </div>
+                <div class="form-group">
+                    <label for="serviceDescription">Service Description:</label>
+                    <textarea id="serviceDescription" name="serviceDescription" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount ($):</label>
+                    <input type="number" id="amount" name="amount" required />
+                </div>
+                <button type="submit" class="submit-button">Submit Invoice</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Your Name | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.getElementById("invoiceForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Invoice submitted!");
+            // You can add more functionality here like saving the data or sending to a backend
+        });
+    </script>
+</body>
+</html>
