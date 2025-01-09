@@ -201,9 +201,9 @@ footer p {
     background-color: #fff;
     color: #333;
     padding: 20px;
-    padding-right: 40px;
+    padding-right: 40px; /* Existing right padding */
     border-radius: 10px;
-    width: 75%;
+    width: 75%; /* Existing width */
     margin: 20px auto;
     box-sizing: border-box;
     max-width: 1000px;
@@ -245,10 +245,12 @@ footer p {
     background-color: #666;
 }
 
+/* Media Query for mobile (max-width: 600px) */
 @media (max-width: 600px) {
     .invoice-form {
-        width: 95%;
-        padding: 10px; 
+        width: 90%; /* Adjusted width for mobile */
+        padding-right: 20px; /* Reduced padding for mobile */
+        padding-left: 20px; /* Ensure left padding is also considered */
     }
 
     .navbar {
