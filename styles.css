@@ -1,39 +1,35 @@
-/* Reset body and html styles to ensure full page height */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Allow footer to stick to bottom */
+    justify-content: flex-start;
 }
 
-/* Body styling */
 body {
     background-color: rgba(66, 17, 25, 1);
     font-family: Arial, sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
-    min-height: 100%; /* Ensures content takes up full height */
+    min-height: 100%;
 }
 
-/* Ensure particles.js stays in the background */
 #particles-js {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Ensure particles are behind other content */
+    z-index: -1;
 }
 
-/* Header section */
 header {
     position: relative;
     z-index: 1;
     text-align: center;
-    padding-top: 80px; /* Increased padding to give space at the top */
+    padding-top: 80px;
     padding-bottom: 40px;
 }
 
@@ -66,17 +62,17 @@ h1 {
     font-style: italic;
 }
 
-/* Navigation buttons */
 .navbar {
     display: flex;
     justify-content: center;
     background-color: #1b1717;
     padding: 10px 20px;
     width: 100%;
-    position: fixed; /* Change to fixed positioning */
-    top: 0; /* Ensures the navbar starts at the top of the page */
-    left: 0; /* Ensures the navbar spans the entire width */
-    z-index: 3; /* Ensure the navbar is on top of other content */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    margin: 0; 
 }
 
 .nav-button {
@@ -93,7 +89,6 @@ h1 {
     background-color: #666;
 }
 
-/* Social icons */
 .social-box {
     margin-top: 30px;
     padding: 5px;
@@ -142,14 +137,13 @@ h1 {
     background-color: #21262d;
 }
 
-/* Logos container animation */
 .logos-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     top: 20px;
-    animation: move-logos 15s ease-in-out infinite; /* Use ease-in-out for smooth transitions */
+    animation: move-logos 15s ease-in-out infinite;
     z-index: 1;
 }
 
@@ -161,25 +155,23 @@ h1 {
     transition: opacity 0.5s ease;
 }
 
-/* Keyframe animation */
 @keyframes move-logos {
     0% {
-        transform: translateX(50%); /* Start from slightly off-center to the right */
+        transform: translateX(50%);
         opacity: 0;
     }
     10% {
-        opacity: 1; /* Fade in */
+        opacity: 1;
     }
     60% {
-        opacity: 1; /* Fully visible */
+        opacity: 1;
     }
     100% {
-        transform: translateX(-50%); /* Move to slightly off-center to the left */
-        opacity: 0; /* Fade out */
+        transform: translateX(-50%);
+        opacity: 0;
     }
 }
 
-/* Footer styling */
 footer {
     width: 100%;
     text-align: center;
@@ -189,7 +181,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute; /* Ensures it's at the bottom of the page */
+    position: absolute;
     bottom: 0;
     padding: 20px 0;
 }
@@ -198,52 +190,47 @@ footer p {
     margin-top: 0;
 }
 
-/* Invoice page styling */
 .invoice-section {
     padding: 20px;
     text-align: center;
-    margin-top: 120px; /* Ensure the invoice starts below the navbar */
+    margin-top: 120px;
+    margin-bottom: 80px; 
 }
 
-/* Invoice form container */
 .invoice-form {
     background-color: #fff;
     color: #333;
     padding: 20px;
-    padding-right: 40px; /* Increased padding on the right side */
+    padding-right: 40px;
     border-radius: 10px;
-    width: 75%; /* Adjusted width */
-    margin: 20px auto; /* Keep it centered */
-    box-sizing: border-box; /* Ensure padding is inside the width */
-    max-width: 1000px; /* Optional: Max width to prevent it from being too wide */
-    font-family: 'Gill Sans', sans-serif !important; /* Ensure Gill Sans font is applied to the entire form */
+    width: 75%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    max-width: 1000px;
+    font-family: 'Gill Sans', sans-serif !important;
 }
 
-/* Form groups with label and input fields */
 .invoice-form .form-group {
     margin-bottom: 20px;
 }
 
-/* Label styling - Force font to Gill Sans */
 .invoice-form label {
     display: block;
     font-weight: bold;
-    font-family: 'Gill Sans', sans-serif !important; /* Apply Gill Sans font with !important */
+    font-family: 'Gill Sans', sans-serif !important;
 }
 
-/* Apply font to text input and textarea elements */
 .invoice-form input[type="text"],
 .invoice-form input[type="date"],
 .invoice-form input[type="number"],
 .invoice-form textarea {
-    font-family: 'Gill Sans', sans-serif !important; /* Apply Gill Sans font to input fields and textarea */
-    font-size: 1em; /* Uniform font size */
+    font-family: 'Gill Sans', sans-serif !important;
+    font-size: 1em;
     width: 100%;
     padding: 10px;
     margin-top: 5px;
 }
 
-/* Styling for the submit button */
 .invoice-form button {
     background-color: #444;
     color: white;
@@ -251,10 +238,30 @@ footer p {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Gill Sans', sans-serif !important; /* Apply Gill Sans font to the button */
+    font-family: 'Gill Sans', sans-serif !important;
 }
 
-/* Button hover effect */
 .invoice-form button:hover {
     background-color: #666;
+}
+
+@media (max-width: 600px) {
+    .invoice-form {
+        width: 95%;
+        padding: 10px; 
+    }
+
+    .navbar {
+        top: 0; 
+    }
+
+    footer {
+        position: relative;
+        bottom: auto;
+        padding: 20px 0;
+    }
+
+    .invoice-section {
+        margin-bottom: 150px; 
+    }
 }
