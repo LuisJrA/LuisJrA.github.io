@@ -195,18 +195,17 @@ footer p {
     text-align: center;
     margin-top: 120px;
     margin-bottom: 80px; 
-}
-
-.invoice-form {
+}.invoice-form {
     background-color: #fff;
     color: #333;
     padding: 20px;
-    padding-right: 40px; /* Existing right padding */
+    padding-left: 50px; /* Left padding */
+    padding-right: 50px; /* Right padding */
     border-radius: 10px;
-    width: 75%; /* Existing width */
-    margin: 20px auto;
-    box-sizing: border-box;
-    max-width: 1000px;
+    width: 60%; /* Adjust width for better centering */
+    margin: 20px auto; /* Center the form horizontally */
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    max-width: 900px; /* Max-width to prevent it from becoming too wide */
     font-family: 'Gill Sans', sans-serif !important;
 }
 
@@ -245,16 +244,18 @@ footer p {
     background-color: #666;
 }
 
-/* Media Query for mobile (max-width: 600px) */
 @media (max-width: 600px) {
     .invoice-form {
-        width: 90%; /* Adjusted width for mobile */
-        padding-right: 20px; /* Reduced padding for mobile */
-        padding-left: 20px; /* Ensure left padding is also considered */
+        width: 90%; /* Ensure it's smaller than 100% on mobile */
+        padding-left: 20px;  /* Adjust left padding */
+        padding-right: 20px; /* Adjust right padding */
+        margin: 10px auto; /* Center the form */
+        box-sizing: border-box; /* Prevent overflow */
+        border-radius: 5px; /* Rounded corners */
     }
 
     .navbar {
-        top: 0; 
+        top: 0;
     }
 
     footer {
@@ -264,6 +265,6 @@ footer p {
     }
 
     .invoice-section {
-        margin-bottom: 150px; 
+        margin-bottom: 150px; /* Add space below for footer */
     }
 }
