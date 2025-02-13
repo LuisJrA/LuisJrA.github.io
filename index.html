@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
+    <!-- Particles.js Background -->
     <div id="particles-js"></div>
 
     <nav class="navbar">
@@ -45,57 +46,32 @@
         <img src="images/json.svg" alt="JSON Logo" />
     </div>
 
+    <!-- Video Section Below the Logos -->
+    <div class="video-section">
+        <video controls autoplay muted playsinline>
+            <source src="images/cookievid.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <h2 class="demo-description">Why Scraping Cookies as JSON is Essential for Websites</h2>
+        <p class="demo-description-text">
+            Scraping cookies in JSON format is an efficient way to collect and store crucial data like session details, authentication tokens, and user preferences from websites. This data is essential for automating tasks such as logging in, tracking sessions, and monitoring user behavior. By capturing cookies in JSON, developers can easily manipulate the data across multiple sessions or applications. This technique is especially useful for mass uploading content or managing large-scale traffic engagement, as it enables seamless automation and scaling of processes without manual input.
+
+        </p>
+        <!-- GitHub Cookie Repo Button (Centered under the description) -->
+        <a href="https://github.com/LuisJrA/cookie-script" class="github-bottom">
+            <img src="images/github-logo.png" alt="GitHub" class="social-icon" />
+            GitHub Cookie Repo
+        </a>
+    </div>
+
     <footer>
         <p>© 2024 Luis Almeida Jr | All Rights Reserved | almeidaluis05@outlook.com</p>
     </footer>
 
     <script>
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 100,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle"
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": true
-                },
-                "size": {
-                    "value": 5,
-                    "random": true
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 3,
-                    "random": true,
-                    "direction": "none",
-                    "out_mode": "out",
-                    "bounce": false
-                }
-            },
-            "interactivity": {
-                "detect_on": "window",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    }
-                }
-            },
-            "retina_detect": true
+        // Load particles.js configuration from external file
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js config loaded');
         });
     </script>
 </body>

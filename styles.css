@@ -17,12 +17,12 @@ body {
 }
 
 #particles-js {
-    position: absolute;
+    position: fixed; /* Make particles fixed */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; /* Keep it behind other content */
 }
 
 header {
@@ -172,6 +172,77 @@ h1 {
     }
 }
 
+/* Video Section Styling */
+.video-section {
+    text-align: center;
+    margin-top: 100px; /* Push video further down */
+    margin-bottom: 120px; /* Add space for footer */
+}
+
+video {
+    max-width: 60%; /* Make the video smaller */
+    height: auto;
+    border: 3px solid #444; /* Grey border matching navbar color */
+    border-radius: 10px;
+}
+
+.demo-description {
+    color: white;
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic; /* Italic for header */
+}
+
+/* Fix for text color */
+.demo-description-text {
+    color: #c1cbd3; /* Grey color for text */
+    font-size: 1.2em;
+    margin-top: 15px;
+    text-align: center;
+    max-width: 600px; /* Reduced max width to make it more compact */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    padding-left: 20px; /* Padding inside to prevent text from touching sides */
+    padding-right: 20px; /* Padding inside to prevent text from touching sides */
+}
+
+/* Bottom GitHub Button (Centered under the description) */
+.github-bottom {
+    display: inline-flex;
+    align-items: center; /* Ensures the image and text are aligned */
+    justify-content: center; /* Centers both elements */
+    text-align: center;
+    background-color: #2b3137;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: auto; /* Ensures the button is not stretched */
+    max-width: 250px; /* Ensures the button doesn't get too wide */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.github-bottom:hover {
+    background-color: #21262d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.github-bottom .social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Space between the image and text */
+}
+
+.demo-description-text {
+    text-align: center;
+}
+
+/* Footer */
 footer {
     width: 100%;
     text-align: center;
@@ -181,7 +252,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
+    position: relative; /* Changed to relative */
     bottom: 0;
     padding: 20px 0;
 }
@@ -195,7 +266,9 @@ footer p {
     text-align: center;
     margin-top: 120px;
     margin-bottom: 80px; 
-}.invoice-form {
+}
+
+.invoice-form {
     background-color: #fff;
     color: #333;
     padding: 20px;
@@ -267,4 +340,13 @@ footer p {
     .invoice-section {
         margin-bottom: 150px; /* Add space below for footer */
     }
+
+    .demo-description {
+        color: white; /* Matches the same color as the text above */
+        font-size: 1.4em;
+        margin-top: 10px;
+        text-align: center;
+        font-style: italic;
+    }
 }
+
